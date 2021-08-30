@@ -1,0 +1,338 @@
+
+:root{
+    --blanco:#ffffff;
+    --oscuro:#212121;
+    --primario:#FFC107;
+    --secundario:#0097A7;
+    --Gris:#757575;
+    --fuente-principal:3.8rem;
+
+}
+
+html{
+font-size: 62.5%;
+font-family: 'Glory', sans-serif;
+box-sizing: border-box; /*Hack para box model */
+scroll-snap-type: y  mandatory;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+
+.titulo span{
+    font-size: 2rem;
+}
+
+body{
+    font-size: 16.2px;
+    font-weight: bolder;
+    font-family:'Glory', sans-serif;
+    background-image: linear-gradient(to top,#DFE9F3 0% , var(--blanco) 100% );
+}
+
+h1{font-size: 3.8rem;
+
+}
+
+h2{font-size: 2.8rem;
+
+}
+
+h3{font-size: 1.8rem;
+
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+
+.contenedor{
+max-width: 120rem;
+margin: 0 auto 0 auto;
+align-items:center;
+
+}
+
+.navegacion-principal{  /* este extiende el menu como tal*/
+display: flex;
+flex-direction: column;
+align-items: center;/*forma de centrar verticalmente*/
+}
+
+
+
+
+
+div.navegador-background{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    /* afecta los espacios de los links */
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+    /* hover afecta a las letras y el fondo de los mismos links pero muy especificados*/
+}
+
+@media (min-width:480px ) { 
+   
+}
+
+@media (min-width:768px ) { 
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;  /*forma de centrar horizontalmente*/
+    }
+}
+
+
+
+@media (min-width: 1140px) { 
+    
+}
+
+@media (min-width: 1440px) { 
+    
+}
+
+
+.hero{
+   background-image: url(../Imagenes/hero.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 410px;
+   position: relative;
+   margin-bottom: 3rem;
+}
+
+.contenido-hero{
+position: absolute;
+background-color: rgba(0, 0, 0, .4);
+background-color: rgb(0, 0, 0/40%);
+width: 100%;
+height: 100%;
+color: white;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.contenido-hero h2,
+.contenedor-hero p{
+color: var(--blanco);
+}
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+
+.boton-contactar{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .6rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+@media (min-width: 768px) { 
+    .boton-contactar{
+        width: auto;
+    }
+}
+
+
+.boton-contactar:hover{
+cursor: pointer;
+}
+
+
+.sombra{
+    -webkit-box-shadow: 1px 10px 44px 3px rgba(112,112,112,1);
+-moz-box-shadow: 1px 10px 44px 3px rgba(112,112,112,1);
+box-shadow: 1px 10px 44px 3px rgba(112,112,112,1);
+background-color:var(--blanco);
+border-radius: 1rem;
+padding: 2rem;
+}
+
+.serviciospa,.navegacion-principal,.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+@media (min-width:768px ) { 
+    .serviciospa{
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+       column-gap: 1rem;
+        /*el porcentaje es como 
+        se repartira la columna*/
+    
+    }
+    
+}
+
+.servicio{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.servicio h3{
+color: var(--secundario);
+font-weight: bold;
+}
+
+.servicio p{
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .iconos{
+height: 10rem;
+width: 10rem;
+background-color: var(--primario);
+border-radius: 50%;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.formulario{
+background-color: var(--Gris);
+width: min(  60rem, 100% ); /** Utilizar el valor mas pequeño **/
+margin: auto;
+border-radius: 5px;
+padding: 2rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+color: var(--primario);
+text-align: center;
+font-size: 1.8rem;
+text-transform:uppercase;
+font-weight: bold;
+margin-bottom: 2rem;
+}
+
+@media (min-width: 768px){ 
+    .contenedor-campos{
+    display: grid;
+    grid-template-columns:50%,50%;
+    grid-template-rows: auto auto auto;
+    column-gap: 1rem;
+    }
+    
+}
+
+.campo:nth-child(1){
+    grid-column:1/2 ;
+    grid-row: 1/2;
+}
+
+.campo:nth-child(2){
+    grid-column:2/3 ;
+    grid-row: -4/-3;
+}
+
+
+.campo:nth-child(3){
+    grid-column:1/3;
+    grid-row: 2/3;
+}
+
+.campo:nth-child(4){
+    grid-column:1/3;
+    grid-row: 3/4;
+}
+
+
+
+
+
+
+.campo{
+margin-bottom: 1rem;
+}
+
+.campo label{
+color: var(--blanco);
+font-weight: bold;
+margin-bottom: .5rem;
+display: block; /* el Display block separa y agarra todo 
+el espacio disponible para una linea*/
+}
+
+/*una manera de etiquetado para ordenar algo muy especifico*/
+/*
+.campo input[type="text"],.campo input[type="tel"],
+.campo input[type="email"]{
+background-color: chartreuse;
+} y otra manera es la de a continuacion
+*/
+
+.campo textarea{
+    height: 20rem;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+
+
+
+.w-100{
+    width: 100%;
+}
+
+@media (min-width: 768px) { 
+    .w-100{
+        width: auto;
+    }
+}
+
+
+.flex{
+    display: flex;
+}
+
+.enviar{
+justify-content: flex-end;
+}
+
+
+footer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
